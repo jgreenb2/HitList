@@ -13,6 +13,8 @@
 		75E576641B7D202A00C58009 /* HitList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75E576621B7D202A00C58009 /* HitList.xcdatamodeld */; };
 		75E576661B7D202A00C58009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E576651B7D202A00C58009 /* Assets.xcassets */; };
 		75E576691B7D202A00C58009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E576671B7D202A00C58009 /* LaunchScreen.storyboard */; };
+		75FB71081B7D872100740A79 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB71061B7D872100740A79 /* Person+CoreDataProperties.swift */; };
+		75FB71091B7D872100740A79 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FB71071B7D872100740A79 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		75E576651B7D202A00C58009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E576681B7D202A00C58009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75E5766A1B7D202A00C58009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75FB71011B7D86E600740A79 /* HitList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HitList-Bridging-Header.h"; sourceTree = "<group>"; };
+		75FB71061B7D872100740A79 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Person+CoreDataProperties.swift"; path = "../Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75FB71071B7D872100740A79 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			children = (
 				75E5765A1B7D202A00C58009 /* HitList */,
 				75E576591B7D202A00C58009 /* Products */,
+				75FB71011B7D86E600740A79 /* HitList-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +62,8 @@
 		75E5765A1B7D202A00C58009 /* HitList */ = {
 			isa = PBXGroup;
 			children = (
+				75FB71061B7D872100740A79 /* Person+CoreDataProperties.swift */,
+				75FB71071B7D872100740A79 /* Person.swift */,
 				75E5765B1B7D202A00C58009 /* AppDelegate.swift */,
 				75E5765D1B7D202A00C58009 /* ViewController.swift */,
 				75E5765F1B7D202A00C58009 /* Main.storyboard */,
@@ -93,6 +101,7 @@
 		75E576501B7D202A00C58009 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jeff Greenberg";
 				TargetAttributes = {
@@ -137,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75FB71091B7D872100740A79 /* Person.swift in Sources */,
+				75FB71081B7D872100740A79 /* Person+CoreDataProperties.swift in Sources */,
 				75E576641B7D202A00C58009 /* HitList.xcdatamodeld in Sources */,
 				75E5765E1B7D202A00C58009 /* ViewController.swift in Sources */,
 				75E5765C1B7D202A00C58009 /* AppDelegate.swift in Sources */,
@@ -252,10 +263,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HitList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ford.HitList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HitList-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -263,10 +277,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HitList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ford.HitList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HitList-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -289,6 +305,7 @@
 				75E5766F1B7D202A00C58009 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
